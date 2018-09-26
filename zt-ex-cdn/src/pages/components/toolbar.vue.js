@@ -1,20 +1,21 @@
-var spahome = Vue.component("Toolbar", {
+var toolbar = Vue.component("Toolbar", {
   template: `<div>
 </div>`,
-  props: ["title"],
+  props: ["options"],
   $_veeValidate: {
     validator: "new"
   },
   data() {
     return {
-      showProgress: false
+      options: []
     };
   },
   created() {
-    this.GetDelays();
+    // this.GetDelays();
   },
   methods: {
-    GetDelays() {
+    changeOption(evt) {
+      console.log(evt)
     }
   }
 });
