@@ -1,5 +1,5 @@
-zt-ex/public
-zt-ex/node_modules
+zt-ex-cli/public
+zt-ex-cli/node_modules
 zt-ex-cdn/node_modules
 zt-ex-cdn/dist
 
