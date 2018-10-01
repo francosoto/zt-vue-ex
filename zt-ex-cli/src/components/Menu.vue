@@ -32,8 +32,7 @@
   </div>
 </template>
 
-<script>
-// import menu from '../apiClients/menu's
+<script> 
 import _ from 'lodash'
 
 var menu = [
@@ -54,56 +53,6 @@ export default {
   },
   created () {
     this.menu = menu
-    // menu.get()
-    //   .then((result) => {
-    //     if (result.status === 200) {
-    //       let actions = JSON.parse(result.data.result)
-    //       this.menu = _.filter(actions, (item) => {
-    //         return item.level === 1 && item.menu
-    //       })
-
-    //       this.menuUser = _.filter(actions, (item) => {
-    //         return item.level === 2 & item.menu
-    //       })
-    //     } else {
-    //       this.logout()
-    //     }
-    //   }).catch((error) => {
-    //     if (error.response) {
-    //       this.logout()
-    //     }
-    //   })
-
-    // auth.getUser()
-    //   .then((result) => {
-    //     if (result.status === 200) {
-    //       let userData = JSON.parse(result.data.result)
-    //       if (userData.username) {
-    //         this.username = userData.username
-    //       }
-    //     } else {
-    //       this.logout()
-    //     }
-    //   }).catch(() => {
-    //     this.logout()
-    //     // if (error.status == 409) {
-    //     // }
-    //   })
-
-    // implementation.get()
-    //   .then((result) => {
-    //     if (result.status === 200) {
-    //       let implData = JSON.parse(result.data.message)
-    //       if (implData.logo) {
-    //         this.logoImg = implData.logo
-    //         this.logoStr = implData.name
-    //       }
-    //     } else {
-    //       this.logout()
-    //     }
-    //   }).catch(() => {
-    //     this.logout()
-    //   })
   },
   methods: {
     logout () {

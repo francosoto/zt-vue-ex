@@ -12,14 +12,12 @@
 // @ is an alias to /src
 import Layout from '@/components/Layout.vue';
 import Menu from '@/components/Menu.vue';
-import Footer from '@/components/Footer.vue';
 
 export default {
   name: 'home',
   components: {
     Menu,
     Layout,
-    Footer,
   },
 };
 </script>
