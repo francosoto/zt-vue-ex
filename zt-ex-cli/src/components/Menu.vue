@@ -2,10 +2,7 @@
   <div class="hello">
     <b-navbar toggleable="md" type="dark" variant="info">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-      <b-navbar-brand href="#" v-show="logoImg">
-        <img title="logoStr" src="logoImg"></img>
-      </b-navbar-brand>
-      <b-navbar-brand href="#" v-show="!logoImg">{{logoStr}}</b-navbar-brand>
+      <b-navbar-brand href="#">{{logoStr}}</b-navbar-brand>
 
       <b-collapse is-nav id="nav_collapse">
 
@@ -23,7 +20,7 @@
             <b-dropdown-item v-for="itemU in menuUser" :key="itemU.id" :to="itemU.url">
               {{itemU.label}}
             </b-dropdown-item>
-            <b-dropdown-item @click="logout()">Salir</b-dropdown-item>
+            <!-- <b-dropdown-item @click="logout()">Salir</b-dropdown-item> -->
           </b-nav-item-dropdown>
         </b-navbar-nav>
 
@@ -32,33 +29,46 @@
   </div>
 </template>
 
-<script> 
-import _ from 'lodash'
+<script>
+// import Vue from 'Vue'
+// import _ from 'lodash'
+// import Component from 'vue-class-component'
+// import { Component } from 'vue-property-decorator'
 
-var menu = [
-  {label:'Link 1', id:'', url: ''},
-  {label:'About', id:'', url: '/about'},
-]
+const menuVars = [
+  {label: 'Link 1', id: '', url: ''},
+  {label: 'About', id: '', url: '/about'},
+];
 
 export default {
   name: 'Menu',
-  data () {
+  data() {
     return {
       username: 'Pepito',
       menu: [],
       menuUser: [],
       logoStr: 'App EX',
-      logoImg: ''
-    }
+    };
   },
-  created () {
-    this.menu = menu
+  created() {
+    this.menu = menuVars;
   },
-  methods: {
-    logout () {
-    }
-  }
-}
+  // methods: {
+  //   logout () {
+  //   },
+  // },
+};
+// @Component
+// export default class Menu extends Vue {
+//   logoStr: string = 'App EX';
+//   menu: string[];
+//   menuUser: string[];
+//   logoImg: string = '';
+//   username: string = 'Pepito';
+//   created () {
+//     this.menu = menu;
+//   }
+// }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

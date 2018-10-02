@@ -5,24 +5,19 @@
 </template>
 
 <script>
-import _ from 'lodash'
+import _ from 'lodash';
 
 export default {
   name: 'Footer',
-
-  data () {
+  data() {
     return {
-      text: 'Bleh'
-    }
+      text: 'Bleh',
+    };
   },
-  created () {
+  created() {
     // this.menu = menu
   },
-  methods: {
-    logout () {
-    }
-  }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
