@@ -2,7 +2,7 @@
   <div class="home">
   	<Menu/>
     <b-container class="bv-example-row">
-      <b-row>
+      <b-row class="parts">
         <b-col>
           <div class="title">
             <h2>{{title}}</h2>
@@ -31,19 +31,19 @@
           </b-form>
         </b-col>
       </b-row>
-      <b-row>
+      <b-row class="parts">
         <b-col>
-          <b-form-group label="Domicilio:" label-for="tags">
+          <!-- <b-form-group label="Domicilio:" label-for="tags"> -->
             <vue-bootstrap-typeahead  :data="item"
                                       v-model="searchTags"
                                       :serializer="s => s.lastname + ', ' + s.name"
                                       placeholder="Ingrese una dirección"
                                       @hit="selectLocation"
                                       @input="searchLocation" />
-          </b-form-group>
+          <!-- </b-form-group> -->
         </b-col>
       </b-row>
-      <b-row class="">
+      <b-row class="parts">
         <b-col>
           <b-table hover :items="items"></b-table>
         </b-col>
@@ -114,5 +114,8 @@ li {
 }
 a {
   color: #42b983;
+}
+.parts {
+  margin: 10px;
 }
 </style>
